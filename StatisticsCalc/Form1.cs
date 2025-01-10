@@ -32,5 +32,10 @@ namespace StatisticsCalc
         {
             MessageBox.Show("Work in progress");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/nk-world/StatisticsCalc/");
+        }
     }
 }
