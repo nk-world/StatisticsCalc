@@ -62,6 +62,8 @@
             this.ResultSD = new System.Windows.Forms.Label();
             this.ResultMDC2 = new System.Windows.Forms.Label();
             this.ResultMD2 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ResultData = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -373,16 +375,36 @@
             this.ResultMD2.TabIndex = 5;
             this.ResultMD2.Text = "-";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(242, 324);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(67, 13);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Sorted Data:";
+            // 
+            // ResultData
+            // 
+            this.ResultData.AutoSize = true;
+            this.ResultData.Location = new System.Drawing.Point(315, 324);
+            this.ResultData.Name = "ResultData";
+            this.ResultData.Size = new System.Drawing.Size(10, 13);
+            this.ResultData.TabIndex = 5;
+            this.ResultData.Text = "-";
+            // 
             // FormIndividual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.ResultMD2);
             this.Controls.Add(this.ResultMDC2);
             this.Controls.Add(this.ResultSD);
             this.Controls.Add(this.ResultSDC);
             this.Controls.Add(this.ResultVar);
+            this.Controls.Add(this.ResultData);
             this.Controls.Add(this.ResultVarC);
             this.Controls.Add(this.ResultMDC1);
             this.Controls.Add(this.ResultMD1);
@@ -456,5 +478,7 @@
         private System.Windows.Forms.Label ResultSD;
         private System.Windows.Forms.Label ResultMDC2;
         private System.Windows.Forms.Label ResultMD2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label ResultData;
     }
 }

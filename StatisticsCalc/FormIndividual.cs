@@ -161,16 +161,90 @@ namespace StatisticsCalc
             ShowResult();
         }
 
+
         private void ShowResult()
         {
-            string[] values = textBox1.Text.Split(',');
-            List<double> numbers = new List<double>(Array.ConvertAll(values, double.Parse));
+            string input = textBox1.Text;
 
-            var result = Program.CalcResults(numbers);
+            // If input is empty, clear all results
+            if (string.IsNullOrEmpty(input))
+            {
+                ResetResults();
+                return;
+            }
 
-            ResultMean.Text = result.Item1.Item1.ToString();
-            ResultMedian.Text = result.Item1.Item2.ToString();
-            ResultMode.Text = result.Item1.Item3.ToString();
+            // Remove any trailing commas or dashes that might have been entered
+            input = input.TrimEnd(',', '-', '.');
+
+            // Split the input by commas
+            string[] values = input.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Create a list to store the numbers
+            List<double> numbers = new List<double>();
+
+
+            // Parse all values into doubles (assuming keypress validation handles most issues)
+            foreach (var value in values)
+            {
+                if (double.TryParse(value, out double num))
+                {
+                    numbers.Add(num);
+                }
+            }
+
+
+            // If no valid numbers were entered, reset and return
+            if (numbers.Count == 0)
+            {
+                ResetResults();
+                return;
+            }
+
+            // Calculate all results
+            var result = Program.CalcAll(numbers);
+            (double mean, double median, List<double> modeList) = result.Item1;
+            ((double q1, double q3), (double max, double min)) = result.Item2;
+            ((double md1, double mdc1), (double md2, double mdc2)) = result.Item3;
+            (double sd, double sdc, double variance, double varc) = result.Item4;
+            List<double> data = result.Item5;
+
+            string mode = modeList != null && modeList.Count > 0
+                ? string.Join(", ", modeList)
+                : "-";
+
+            UpdateResultLabel(mean, median, mode, q1, q3, max, min, md1, md2, mdc1, mdc2, sd, sdc, variance, varc, data);
+        }
+
+        private void ResetResults()
+        {
+            ResultMean.Text = ResultMedian.Text = ResultMode.Text = ResultMax.Text = ResultMin.Text = ResultQ1.Text = ResultQ3.Text = "-";
+            ResultMD1.Text = ResultMD2.Text = ResultMDC1.Text = ResultMDC2.Text = ResultSD.Text = ResultSDC.Text = ResultVar.Text = 
+                ResultVarC.Text = "-";
+        }
+
+        private void UpdateResultLabel(
+            double mean, double median, string mode,
+            double q1, double q3, double max, double min,
+            double md1, double md2, double mdc1, double mdc2,
+            double sd, double sdc, double variance, double varc,
+            List<double> data)
+        {
+            ResultMean.Text = double.IsNaN(mean) ? "-" : mean.ToString();
+            ResultMedian.Text = double.IsNaN(median) ? "-" : median.ToString();
+            ResultMode.Text = mode;
+            ResultMax.Text = double.IsNaN(max) ? "-" : max.ToString();
+            ResultMin.Text = double.IsNaN(min) ? "-" : min.ToString();
+            ResultQ1.Text = double.IsNaN(q1) ? "-" : q1.ToString();
+            ResultQ3.Text = double.IsNaN(q3) ? "-" : q3.ToString();
+            ResultMD1.Text = double.IsNaN(md1) ? "-" : md1.ToString();
+            ResultMD2.Text = double.IsNaN(md2) ? "-" : md2.ToString();
+            ResultMDC1.Text = double.IsNaN(mdc1) ? "-" : mdc1.ToString();
+            ResultMDC2.Text = double.IsNaN(mdc2) ? "-" : mdc2.ToString();
+            ResultSD.Text = double.IsNaN(sd) ? "-" : sd.ToString();
+            ResultSDC.Text = double.IsNaN(sdc) ? "-" : sdc.ToString();
+            ResultVar.Text = double.IsNaN(variance) ? "-" : variance.ToString();
+            ResultVarC.Text = double.IsNaN(varc) ? "-" : (varc.ToString() + "%");
+            ResultData.Text = string.Join(", ", data);
         }
     }
 }
