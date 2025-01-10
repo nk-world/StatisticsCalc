@@ -18,7 +18,7 @@ Additionally, it also displays the entered data in ascending order.
 Currently, this application only supports individual series, support for discrete and continuous series will come in the future.
 
 # Installation
-Click here to go to releases and download it.
+[Click here](https://github.com/nk-world/StatisticsCalc/releases/) to go to releases and download it.
 
 # Using
   1. Open the application
