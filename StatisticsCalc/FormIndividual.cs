@@ -219,7 +219,7 @@ namespace StatisticsCalc
         {
             ResultMean.Text = ResultMedian.Text = ResultMode.Text = ResultMax.Text = ResultMin.Text = ResultQ1.Text = ResultQ3.Text = "-";
             ResultMD1.Text = ResultMD2.Text = ResultMDC1.Text = ResultMDC2.Text = ResultSD.Text = ResultSDC.Text = ResultVar.Text = 
-                ResultVarC.Text = "-";
+                ResultVarC.Text = ResultData.Text = "-";
         }
 
         private void UpdateResultLabel(
