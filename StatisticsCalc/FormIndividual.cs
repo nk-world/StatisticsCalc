@@ -246,5 +246,133 @@ namespace StatisticsCalc
             ResultVarC.Text = double.IsNaN(varc) ? "-" : (varc.ToString() + "%");
             ResultData.Text = string.Join(", ", data);
         }
+
+        private void ResultMean_Click(object sender, EventArgs e)
+        {
+            if(!ResultMean.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMean.Text);
+            }
+        }
+
+        private void ResultMedian_Click(object sender, EventArgs e)
+        {
+            if (!ResultMedian.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMedian.Text);
+            }
+        }
+
+        private void ResultMode_Click(object sender, EventArgs e)
+        {
+            if (!ResultMode.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMode.Text);
+            }
+        }
+
+        private void ResultQ1_Click(object sender, EventArgs e)
+        {
+            if (!ResultQ1.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultQ1.Text);
+            }
+        }
+
+        private void ResultQ3_Click(object sender, EventArgs e)
+        {
+            if (!ResultQ3.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultQ3.Text);
+            }
+        }
+
+        private void ResultMin_Click(object sender, EventArgs e)
+        {
+            if (!ResultMin.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMin.Text);
+            }
+        }
+
+        private void ResultMax_Click(object sender, EventArgs e)
+        {
+            if (!ResultMax.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMax.Text);
+            }
+        }
+
+        private void ResultMD1_Click(object sender, EventArgs e)
+        {
+            if (!ResultMD1.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMD1.Text);
+            }
+        }
+
+        private void ResultMD2_Click(object sender, EventArgs e)
+        {
+            if (!ResultMD2.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMD2.Text);
+            }
+        }
+
+        private void ResultMDC1_Click(object sender, EventArgs e)
+        {
+            if (!ResultMDC1.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMDC1.Text);
+            }
+        }
+
+        private void ResultMDC2_Click(object sender, EventArgs e)
+        {
+            if (!ResultMDC2.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultMDC2.Text);
+            }
+        }
+
+        private void ResultSD_Click(object sender, EventArgs e)
+        {
+            if (!ResultSD.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultSD.Text);
+            }
+        }
+
+        private void ResultSDC_Click(object sender, EventArgs e)
+        {
+            if (!ResultSDC.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultSDC.Text);
+            }
+        }
+
+        private void ResultVar_Click(object sender, EventArgs e)
+        {
+            if (!ResultVar.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultVar.Text);
+            }
+        }
+
+        private void ResultVarC_Click(object sender, EventArgs e)
+        {
+            if (!ResultVarC.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultVarC.Text);
+            }
+        }
+
+        private void ResultData_Click(object sender, EventArgs e)
+        {
+            if (!ResultData.Text.Equals("-"))
+            {
+                Clipboard.SetText(ResultData.Text);
+            }
+        }
     }
 }
