@@ -12,18 +12,18 @@ This is an application to calculate various measures of statistics. This include
 - Standard Deviation and its Coefficient
 - Variance and its Coefficient
 
-  Additionally, it also displays the entered data in ascending order.
+Additionally, it also displays the entered data in ascending order.
 
-  ### Supports
-  Currently, this application only supports individual series, support for discrete and continuous series will come in the future.
+### Supports
+Currently, this application only supports individual series, support for discrete and continuous series will come in the future.
 
-  # Installation
-  Click here to go to releases and download it.
+# Installation
+Click here to go to releases and download it.
 
-  # Using
+# Using
   1. Open the application
   2. Choose the type of data
   3. Enter the data separated by commas, invalid datas will be blocked automatically.
   4. The result will be displayed on the screen. The result can be clicked on to copy it.
  
-  Thanks a lot for using my `Statistics Calculator`!
+Thanks a lot for using my `Statistics Calculator`!
