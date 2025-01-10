@@ -249,7 +249,7 @@ namespace StatisticsCalc
 
         private void ResultMean_Click(object sender, EventArgs e)
         {
-            if(!ResultMean.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMean.Text) && ResultMean.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMean.Text);
             }
@@ -257,7 +257,7 @@ namespace StatisticsCalc
 
         private void ResultMedian_Click(object sender, EventArgs e)
         {
-            if (!ResultMedian.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMedian.Text) && ResultMedian.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMedian.Text);
             }
@@ -265,7 +265,7 @@ namespace StatisticsCalc
 
         private void ResultMode_Click(object sender, EventArgs e)
         {
-            if (!ResultMode.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMode.Text) && ResultMode.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMode.Text);
             }
@@ -273,7 +273,7 @@ namespace StatisticsCalc
 
         private void ResultQ1_Click(object sender, EventArgs e)
         {
-            if (!ResultQ1.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultQ1.Text) && ResultQ1.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultQ1.Text);
             }
@@ -281,7 +281,7 @@ namespace StatisticsCalc
 
         private void ResultQ3_Click(object sender, EventArgs e)
         {
-            if (!ResultQ3.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultQ3.Text) && ResultQ3.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultQ3.Text);
             }
@@ -289,7 +289,7 @@ namespace StatisticsCalc
 
         private void ResultMin_Click(object sender, EventArgs e)
         {
-            if (!ResultMin.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMin.Text) && ResultMin.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMin.Text);
             }
@@ -297,7 +297,7 @@ namespace StatisticsCalc
 
         private void ResultMax_Click(object sender, EventArgs e)
         {
-            if (!ResultMax.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMax.Text) && ResultMax.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMax.Text);
             }
@@ -305,7 +305,7 @@ namespace StatisticsCalc
 
         private void ResultMD1_Click(object sender, EventArgs e)
         {
-            if (!ResultMD1.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMD1.Text) && ResultMD1.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMD1.Text);
             }
@@ -313,7 +313,7 @@ namespace StatisticsCalc
 
         private void ResultMD2_Click(object sender, EventArgs e)
         {
-            if (!ResultMD2.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMD2.Text) && ResultMD2.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMD2.Text);
             }
@@ -321,7 +321,7 @@ namespace StatisticsCalc
 
         private void ResultMDC1_Click(object sender, EventArgs e)
         {
-            if (!ResultMDC1.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMDC1.Text) && ResultMDC1.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMDC1.Text);
             }
@@ -329,7 +329,7 @@ namespace StatisticsCalc
 
         private void ResultMDC2_Click(object sender, EventArgs e)
         {
-            if (!ResultMDC2.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultMDC2.Text) && ResultMDC2.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultMDC2.Text);
             }
@@ -337,7 +337,7 @@ namespace StatisticsCalc
 
         private void ResultSD_Click(object sender, EventArgs e)
         {
-            if (!ResultSD.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultSD.Text) && ResultSD.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultSD.Text);
             }
@@ -345,7 +345,8 @@ namespace StatisticsCalc
 
         private void ResultSDC_Click(object sender, EventArgs e)
         {
-            if (!ResultSDC.Text.Equals("-"))
+            
+            if (!string.IsNullOrEmpty(ResultSDC.Text) && ResultSDC.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultSDC.Text);
             }
@@ -353,7 +354,7 @@ namespace StatisticsCalc
 
         private void ResultVar_Click(object sender, EventArgs e)
         {
-            if (!ResultVar.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultVar.Text) &&  ResultVar.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultVar.Text);
             }
@@ -361,7 +362,7 @@ namespace StatisticsCalc
 
         private void ResultVarC_Click(object sender, EventArgs e)
         {
-            if (!ResultVarC.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultVarC.Text) && ResultVarC.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultVarC.Text);
             }
@@ -369,7 +370,7 @@ namespace StatisticsCalc
 
         private void ResultData_Click(object sender, EventArgs e)
         {
-            if (!ResultData.Text.Equals("-"))
+            if (!string.IsNullOrEmpty(ResultData.Text) && ResultData.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultData.Text);
             }
