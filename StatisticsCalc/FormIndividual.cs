@@ -212,14 +212,16 @@ namespace StatisticsCalc
                 ? string.Join(", ", modeList)
                 : "-";
 
-            UpdateResultLabel(mean, median, mode, q1, q3, max, min, md1, md2, mdc1, mdc2, sd, sdc, variance, varc, data);
+            int count = data.Count;
+
+            UpdateResultLabel(mean, median, mode, q1, q3, max, min, md1, md2, mdc1, mdc2, sd, sdc, variance, varc, data, count);
         }
 
         private void ResetResults()
         {
             ResultMean.Text = ResultMedian.Text = ResultMode.Text = ResultMax.Text = ResultMin.Text = ResultQ1.Text = ResultQ3.Text = "-";
             ResultMD1.Text = ResultMD2.Text = ResultMDC1.Text = ResultMDC2.Text = ResultSD.Text = ResultSDC.Text = ResultVar.Text = 
-                ResultVarC.Text = ResultData.Text = "-";
+                ResultVarC.Text = ResultData.Text = ResultN.Text =  "-";
         }
 
         private void UpdateResultLabel(
@@ -227,7 +229,7 @@ namespace StatisticsCalc
             double q1, double q3, double max, double min,
             double md1, double md2, double mdc1, double mdc2,
             double sd, double sdc, double variance, double varc,
-            List<double> data)
+            List<double> data, int count)
         {
             ResultMean.Text = double.IsNaN(mean) ? "-" : mean.ToString();
             ResultMedian.Text = double.IsNaN(median) ? "-" : median.ToString();
@@ -245,6 +247,7 @@ namespace StatisticsCalc
             ResultVar.Text = double.IsNaN(variance) ? "-" : variance.ToString();
             ResultVarC.Text = double.IsNaN(varc) ? "-" : (varc.ToString() + "%");
             ResultData.Text = string.Join(", ", data);
+            ResultN.Text = count.ToString();
         }
 
         private void ResultMean_Click(object sender, EventArgs e)
@@ -373,6 +376,14 @@ namespace StatisticsCalc
             if (!string.IsNullOrEmpty(ResultData.Text) && ResultData.Text.Trim() != "-")
             {
                 Clipboard.SetText(ResultData.Text);
+            }
+        }
+
+        private void ResultN_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ResultN.Text) && ResultN.Text.Trim() != "-")
+            {
+                Clipboard.SetText(ResultN.Text);
             }
         }
     }

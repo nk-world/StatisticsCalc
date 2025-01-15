@@ -109,7 +109,7 @@ namespace StatisticsCalc
         }
 
         public static
-    ((double mean, double median, List<double> mode),
+    ((double , double , List<double>),
     ((double, double), (double, double)),
     ((double, double), (double, double)),
     (double, double, double, double), List<double>)

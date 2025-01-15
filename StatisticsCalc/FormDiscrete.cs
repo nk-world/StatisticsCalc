@@ -297,5 +297,13 @@ namespace StatisticsCalc
                 Clipboard.SetText(ResultVarC.Text);
             }
         }
+
+        private void ResultN_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ResultN.Text) && ResultN.Text.Trim() != "-")
+            {
+                Clipboard.SetText(ResultN.Text);
+            }
+        }
     }
 }

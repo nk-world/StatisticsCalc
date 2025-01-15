@@ -65,6 +65,8 @@
             this.ResultMD2 = new System.Windows.Forms.Label();
             this.LabelDataInAscendingOrder = new System.Windows.Forms.Label();
             this.ResultData = new System.Windows.Forms.Label();
+            this.labelDataCount = new System.Windows.Forms.Label();
+            this.ResultN = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -79,7 +81,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 352);
+            this.textBox1.Location = new System.Drawing.Point(12, 365);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(776, 42);
@@ -90,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 402);
+            this.label1.Location = new System.Drawing.Point(17, 413);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(292, 13);
             this.label1.TabIndex = 2;
@@ -99,7 +101,7 @@
             // LabelMean
             // 
             this.LabelMean.AutoSize = true;
-            this.LabelMean.Location = new System.Drawing.Point(272, 62);
+            this.LabelMean.Location = new System.Drawing.Point(271, 55);
             this.LabelMean.Name = "LabelMean";
             this.LabelMean.Size = new System.Drawing.Size(37, 13);
             this.LabelMean.TabIndex = 3;
@@ -108,7 +110,7 @@
             // LabelMedian
             // 
             this.LabelMedian.AutoSize = true;
-            this.LabelMedian.Location = new System.Drawing.Point(264, 75);
+            this.LabelMedian.Location = new System.Drawing.Point(263, 68);
             this.LabelMedian.Name = "LabelMedian";
             this.LabelMedian.Size = new System.Drawing.Size(45, 13);
             this.LabelMedian.TabIndex = 3;
@@ -117,7 +119,7 @@
             // LabelMode
             // 
             this.LabelMode.AutoSize = true;
-            this.LabelMode.Location = new System.Drawing.Point(272, 88);
+            this.LabelMode.Location = new System.Drawing.Point(271, 81);
             this.LabelMode.Name = "LabelMode";
             this.LabelMode.Size = new System.Drawing.Size(37, 13);
             this.LabelMode.TabIndex = 3;
@@ -126,7 +128,7 @@
             // Label1Quartile
             // 
             this.Label1Quartile.AutoSize = true;
-            this.Label1Quartile.Location = new System.Drawing.Point(241, 112);
+            this.Label1Quartile.Location = new System.Drawing.Point(240, 105);
             this.Label1Quartile.Name = "Label1Quartile";
             this.Label1Quartile.Size = new System.Drawing.Size(68, 13);
             this.Label1Quartile.TabIndex = 3;
@@ -135,7 +137,7 @@
             // Label3Quartile
             // 
             this.Label3Quartile.AutoSize = true;
-            this.Label3Quartile.Location = new System.Drawing.Point(236, 125);
+            this.Label3Quartile.Location = new System.Drawing.Point(235, 118);
             this.Label3Quartile.Name = "Label3Quartile";
             this.Label3Quartile.Size = new System.Drawing.Size(73, 13);
             this.Label3Quartile.TabIndex = 3;
@@ -144,7 +146,7 @@
             // LabelMinimum
             // 
             this.LabelMinimum.AutoSize = true;
-            this.LabelMinimum.Location = new System.Drawing.Point(282, 149);
+            this.LabelMinimum.Location = new System.Drawing.Point(281, 142);
             this.LabelMinimum.Name = "LabelMinimum";
             this.LabelMinimum.Size = new System.Drawing.Size(27, 13);
             this.LabelMinimum.TabIndex = 3;
@@ -153,7 +155,7 @@
             // LabelMaximum
             // 
             this.LabelMaximum.AutoSize = true;
-            this.LabelMaximum.Location = new System.Drawing.Point(279, 162);
+            this.LabelMaximum.Location = new System.Drawing.Point(278, 155);
             this.LabelMaximum.Name = "LabelMaximum";
             this.LabelMaximum.Size = new System.Drawing.Size(30, 13);
             this.LabelMaximum.TabIndex = 3;
@@ -162,7 +164,7 @@
             // LabelMDMean
             // 
             this.LabelMDMean.AutoSize = true;
-            this.LabelMDMean.Location = new System.Drawing.Point(171, 186);
+            this.LabelMDMean.Location = new System.Drawing.Point(170, 179);
             this.LabelMDMean.Name = "LabelMDMean";
             this.LabelMDMean.Size = new System.Drawing.Size(138, 13);
             this.LabelMDMean.TabIndex = 3;
@@ -171,7 +173,7 @@
             // LabelMDMeanCoefficient
             // 
             this.LabelMDMeanCoefficient.AutoSize = true;
-            this.LabelMDMeanCoefficient.Location = new System.Drawing.Point(158, 199);
+            this.LabelMDMeanCoefficient.Location = new System.Drawing.Point(157, 192);
             this.LabelMDMeanCoefficient.Name = "LabelMDMeanCoefficient";
             this.LabelMDMeanCoefficient.Size = new System.Drawing.Size(151, 13);
             this.LabelMDMeanCoefficient.TabIndex = 3;
@@ -180,7 +182,7 @@
             // LabelMDMedian
             // 
             this.LabelMDMedian.AutoSize = true;
-            this.LabelMDMedian.Location = new System.Drawing.Point(163, 223);
+            this.LabelMDMedian.Location = new System.Drawing.Point(162, 216);
             this.LabelMDMedian.Name = "LabelMDMedian";
             this.LabelMDMedian.Size = new System.Drawing.Size(146, 13);
             this.LabelMDMedian.TabIndex = 3;
@@ -189,7 +191,7 @@
             // LabelMDMedianCoefficient
             // 
             this.LabelMDMedianCoefficient.AutoSize = true;
-            this.LabelMDMedianCoefficient.Location = new System.Drawing.Point(150, 236);
+            this.LabelMDMedianCoefficient.Location = new System.Drawing.Point(149, 229);
             this.LabelMDMedianCoefficient.Name = "LabelMDMedianCoefficient";
             this.LabelMDMedianCoefficient.Size = new System.Drawing.Size(159, 13);
             this.LabelMDMedianCoefficient.TabIndex = 3;
@@ -198,7 +200,7 @@
             // LabelStandardDeviation
             // 
             this.LabelStandardDeviation.AutoSize = true;
-            this.LabelStandardDeviation.Location = new System.Drawing.Point(208, 263);
+            this.LabelStandardDeviation.Location = new System.Drawing.Point(207, 256);
             this.LabelStandardDeviation.Name = "LabelStandardDeviation";
             this.LabelStandardDeviation.Size = new System.Drawing.Size(101, 13);
             this.LabelStandardDeviation.TabIndex = 3;
@@ -207,7 +209,7 @@
             // LabelStandardDeviationCoefficient
             // 
             this.LabelStandardDeviationCoefficient.AutoSize = true;
-            this.LabelStandardDeviationCoefficient.Location = new System.Drawing.Point(213, 276);
+            this.LabelStandardDeviationCoefficient.Location = new System.Drawing.Point(212, 269);
             this.LabelStandardDeviationCoefficient.Name = "LabelStandardDeviationCoefficient";
             this.LabelStandardDeviationCoefficient.Size = new System.Drawing.Size(96, 13);
             this.LabelStandardDeviationCoefficient.TabIndex = 3;
@@ -216,7 +218,7 @@
             // LabelVariance
             // 
             this.LabelVariance.AutoSize = true;
-            this.LabelVariance.Location = new System.Drawing.Point(257, 289);
+            this.LabelVariance.Location = new System.Drawing.Point(256, 282);
             this.LabelVariance.Name = "LabelVariance";
             this.LabelVariance.Size = new System.Drawing.Size(52, 13);
             this.LabelVariance.TabIndex = 3;
@@ -225,7 +227,7 @@
             // LabelVarianceCoefficient
             // 
             this.LabelVarianceCoefficient.AutoSize = true;
-            this.LabelVarianceCoefficient.Location = new System.Drawing.Point(192, 302);
+            this.LabelVarianceCoefficient.Location = new System.Drawing.Point(191, 295);
             this.LabelVarianceCoefficient.Name = "LabelVarianceCoefficient";
             this.LabelVarianceCoefficient.Size = new System.Drawing.Size(117, 13);
             this.LabelVarianceCoefficient.TabIndex = 3;
@@ -235,7 +237,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label6.Location = new System.Drawing.Point(166, 16);
+            this.label6.Location = new System.Drawing.Point(165, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(434, 46);
             this.label6.TabIndex = 4;
@@ -244,7 +246,7 @@
             // ResultMean
             // 
             this.ResultMean.AutoSize = true;
-            this.ResultMean.Location = new System.Drawing.Point(315, 62);
+            this.ResultMean.Location = new System.Drawing.Point(314, 55);
             this.ResultMean.Name = "ResultMean";
             this.ResultMean.Size = new System.Drawing.Size(10, 13);
             this.ResultMean.TabIndex = 5;
@@ -254,7 +256,7 @@
             // ResultMedian
             // 
             this.ResultMedian.AutoSize = true;
-            this.ResultMedian.Location = new System.Drawing.Point(315, 75);
+            this.ResultMedian.Location = new System.Drawing.Point(314, 68);
             this.ResultMedian.Name = "ResultMedian";
             this.ResultMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultMedian.TabIndex = 5;
@@ -264,7 +266,7 @@
             // ResultMode
             // 
             this.ResultMode.AutoSize = true;
-            this.ResultMode.Location = new System.Drawing.Point(315, 88);
+            this.ResultMode.Location = new System.Drawing.Point(314, 81);
             this.ResultMode.Name = "ResultMode";
             this.ResultMode.Size = new System.Drawing.Size(10, 13);
             this.ResultMode.TabIndex = 5;
@@ -274,7 +276,7 @@
             // ResultQ1
             // 
             this.ResultQ1.AutoSize = true;
-            this.ResultQ1.Location = new System.Drawing.Point(315, 112);
+            this.ResultQ1.Location = new System.Drawing.Point(314, 105);
             this.ResultQ1.Name = "ResultQ1";
             this.ResultQ1.Size = new System.Drawing.Size(10, 13);
             this.ResultQ1.TabIndex = 5;
@@ -284,7 +286,7 @@
             // ResultQ3
             // 
             this.ResultQ3.AutoSize = true;
-            this.ResultQ3.Location = new System.Drawing.Point(315, 125);
+            this.ResultQ3.Location = new System.Drawing.Point(314, 118);
             this.ResultQ3.Name = "ResultQ3";
             this.ResultQ3.Size = new System.Drawing.Size(10, 13);
             this.ResultQ3.TabIndex = 5;
@@ -294,7 +296,7 @@
             // ResultMin
             // 
             this.ResultMin.AutoSize = true;
-            this.ResultMin.Location = new System.Drawing.Point(315, 149);
+            this.ResultMin.Location = new System.Drawing.Point(314, 142);
             this.ResultMin.Name = "ResultMin";
             this.ResultMin.Size = new System.Drawing.Size(10, 13);
             this.ResultMin.TabIndex = 5;
@@ -304,7 +306,7 @@
             // ResultMax
             // 
             this.ResultMax.AutoSize = true;
-            this.ResultMax.Location = new System.Drawing.Point(315, 162);
+            this.ResultMax.Location = new System.Drawing.Point(314, 155);
             this.ResultMax.Name = "ResultMax";
             this.ResultMax.Size = new System.Drawing.Size(10, 13);
             this.ResultMax.TabIndex = 5;
@@ -314,7 +316,7 @@
             // ResultMD1
             // 
             this.ResultMD1.AutoSize = true;
-            this.ResultMD1.Location = new System.Drawing.Point(315, 186);
+            this.ResultMD1.Location = new System.Drawing.Point(314, 179);
             this.ResultMD1.Name = "ResultMD1";
             this.ResultMD1.Size = new System.Drawing.Size(10, 13);
             this.ResultMD1.TabIndex = 5;
@@ -324,7 +326,7 @@
             // ResultMDC1
             // 
             this.ResultMDC1.AutoSize = true;
-            this.ResultMDC1.Location = new System.Drawing.Point(315, 199);
+            this.ResultMDC1.Location = new System.Drawing.Point(314, 192);
             this.ResultMDC1.Name = "ResultMDC1";
             this.ResultMDC1.Size = new System.Drawing.Size(10, 13);
             this.ResultMDC1.TabIndex = 5;
@@ -334,7 +336,7 @@
             // ResultVarC
             // 
             this.ResultVarC.AutoSize = true;
-            this.ResultVarC.Location = new System.Drawing.Point(315, 302);
+            this.ResultVarC.Location = new System.Drawing.Point(314, 295);
             this.ResultVarC.Name = "ResultVarC";
             this.ResultVarC.Size = new System.Drawing.Size(10, 13);
             this.ResultVarC.TabIndex = 5;
@@ -344,7 +346,7 @@
             // ResultVar
             // 
             this.ResultVar.AutoSize = true;
-            this.ResultVar.Location = new System.Drawing.Point(315, 289);
+            this.ResultVar.Location = new System.Drawing.Point(314, 282);
             this.ResultVar.Name = "ResultVar";
             this.ResultVar.Size = new System.Drawing.Size(10, 13);
             this.ResultVar.TabIndex = 5;
@@ -354,7 +356,7 @@
             // ResultSDC
             // 
             this.ResultSDC.AutoSize = true;
-            this.ResultSDC.Location = new System.Drawing.Point(315, 276);
+            this.ResultSDC.Location = new System.Drawing.Point(314, 269);
             this.ResultSDC.Name = "ResultSDC";
             this.ResultSDC.Size = new System.Drawing.Size(10, 13);
             this.ResultSDC.TabIndex = 5;
@@ -364,7 +366,7 @@
             // ResultSD
             // 
             this.ResultSD.AutoSize = true;
-            this.ResultSD.Location = new System.Drawing.Point(315, 263);
+            this.ResultSD.Location = new System.Drawing.Point(314, 256);
             this.ResultSD.Name = "ResultSD";
             this.ResultSD.Size = new System.Drawing.Size(10, 13);
             this.ResultSD.TabIndex = 5;
@@ -374,7 +376,7 @@
             // ResultMDC2
             // 
             this.ResultMDC2.AutoSize = true;
-            this.ResultMDC2.Location = new System.Drawing.Point(315, 236);
+            this.ResultMDC2.Location = new System.Drawing.Point(314, 229);
             this.ResultMDC2.Name = "ResultMDC2";
             this.ResultMDC2.Size = new System.Drawing.Size(10, 13);
             this.ResultMDC2.TabIndex = 5;
@@ -384,7 +386,7 @@
             // ResultMD2
             // 
             this.ResultMD2.AutoSize = true;
-            this.ResultMD2.Location = new System.Drawing.Point(315, 223);
+            this.ResultMD2.Location = new System.Drawing.Point(314, 216);
             this.ResultMD2.Name = "ResultMD2";
             this.ResultMD2.Size = new System.Drawing.Size(10, 13);
             this.ResultMD2.TabIndex = 5;
@@ -394,7 +396,7 @@
             // LabelDataInAscendingOrder
             // 
             this.LabelDataInAscendingOrder.AutoSize = true;
-            this.LabelDataInAscendingOrder.Location = new System.Drawing.Point(242, 324);
+            this.LabelDataInAscendingOrder.Location = new System.Drawing.Point(241, 317);
             this.LabelDataInAscendingOrder.Name = "LabelDataInAscendingOrder";
             this.LabelDataInAscendingOrder.Size = new System.Drawing.Size(67, 13);
             this.LabelDataInAscendingOrder.TabIndex = 6;
@@ -403,18 +405,39 @@
             // ResultData
             // 
             this.ResultData.AutoSize = true;
-            this.ResultData.Location = new System.Drawing.Point(315, 324);
+            this.ResultData.Location = new System.Drawing.Point(314, 317);
             this.ResultData.Name = "ResultData";
             this.ResultData.Size = new System.Drawing.Size(10, 13);
             this.ResultData.TabIndex = 5;
             this.ResultData.Text = "-";
             this.ResultData.Click += new System.EventHandler(this.ResultData_Click);
             // 
+            // labelDataCount
+            // 
+            this.labelDataCount.AutoSize = true;
+            this.labelDataCount.Location = new System.Drawing.Point(196, 339);
+            this.labelDataCount.Name = "labelDataCount";
+            this.labelDataCount.Size = new System.Drawing.Size(112, 13);
+            this.labelDataCount.TabIndex = 7;
+            this.labelDataCount.Text = "Total Number of Data:";
+            // 
+            // ResultN
+            // 
+            this.ResultN.AutoSize = true;
+            this.ResultN.Location = new System.Drawing.Point(314, 339);
+            this.ResultN.Name = "ResultN";
+            this.ResultN.Size = new System.Drawing.Size(10, 13);
+            this.ResultN.TabIndex = 8;
+            this.ResultN.Text = "-";
+            this.ResultN.Click += new System.EventHandler(this.ResultN_Click);
+            // 
             // FormIndividual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultN);
+            this.Controls.Add(this.labelDataCount);
             this.Controls.Add(this.LabelDataInAscendingOrder);
             this.Controls.Add(this.ResultMD2);
             this.Controls.Add(this.ResultMDC2);
@@ -500,5 +523,7 @@
         private System.Windows.Forms.Label ResultMD2;
         private System.Windows.Forms.Label LabelDataInAscendingOrder;
         private System.Windows.Forms.Label ResultData;
+        private System.Windows.Forms.Label labelDataCount;
+        private System.Windows.Forms.Label ResultN;
     }
 }

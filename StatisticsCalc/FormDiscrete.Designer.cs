@@ -426,6 +426,7 @@
             this.ResultN.Size = new System.Drawing.Size(10, 13);
             this.ResultN.TabIndex = 41;
             this.ResultN.Text = "-";
+            this.ResultN.Click += new System.EventHandler(this.ResultN_Click);
             // 
             // FormDiscrete
             // 
