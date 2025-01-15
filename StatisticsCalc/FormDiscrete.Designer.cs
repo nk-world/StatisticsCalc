@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDiscrete));
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DataColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -445,8 +446,9 @@
             this.Controls.Add(this.LabelMean);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDiscrete";
-            this.Text = "FormDiscrete";
+            this.Text = "Discrete Series";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDiscrete_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

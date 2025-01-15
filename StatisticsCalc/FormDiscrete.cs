@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace StatisticsCalc
 {
@@ -69,7 +69,7 @@ namespace StatisticsCalc
                     if (dataGridView1.Rows[e.RowIndex].Cells[0].Value == null ||
                         string.IsNullOrWhiteSpace(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()))
                     {
-                        dataGridView1.Rows[e.RowIndex].Cells[0].Value = "blank";
+                        dataGridView1.Rows[e.RowIndex].Cells[0].Value = "???";
                     }
                 }
             }
@@ -91,9 +91,22 @@ namespace StatisticsCalc
 
         private void ShowResults()
         {
-            if (dataGridView1.Rows.Count == 0)
+            bool isDataPresent = false;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                MessageBox.Show("No data to calculate.", "No data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dataGridView1.Rows[i].Cells[0].Value != null &&
+                    !string.IsNullOrWhiteSpace(dataGridView1.Rows[i].Cells[0].Value.ToString()) &&
+                    dataGridView1.Rows[i].Cells[0].Value.ToString().Trim() != "???")
+                {
+                    isDataPresent = true;
+                    break;
+                }
+            }
+
+            if (!isDataPresent)
+            {
+                MessageBox.Show("Please enter the data first.", "No data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ResetResults();
                 return;
             }
@@ -104,7 +117,7 @@ namespace StatisticsCalc
             {
                 if (dataGridView1.Rows[i].Cells[0].Value == null ||
                     string.IsNullOrWhiteSpace(dataGridView1.Rows[i].Cells[0].Value.ToString()) ||
-                    dataGridView1.Rows[i].Cells[0].Value.ToString() == "blank") continue;
+                    dataGridView1.Rows[i].Cells[0].Value.ToString() == "???") continue;
 
                 if (double.TryParse(dataGridView1.Rows[i].Cells[0].Value.ToString(), out double datum))
                 {
@@ -112,8 +125,8 @@ namespace StatisticsCalc
                         string.IsNullOrWhiteSpace(dataGridView1.Rows[i].Cells[1].Value.ToString())) data.Add(datum);
                     else
                         if (int.TryParse(dataGridView1.Rows[i].Cells[1].Value.ToString(), out int freq))
-                            for (int j = 0; j < freq; j++)
-                                data.Add(datum);
+                        for (int j = 0; j < freq; j++)
+                            data.Add(datum);
                 }
             }
 
