@@ -15,7 +15,7 @@ This is an application to calculate various measures of statistics. This include
 Additionally, it also displays the entered data in ascending order.
 
 ### Supports
-Currently, this application only supports individual series, support for discrete and continuous series will come in the future.
+Currently, this application only supports individual series and discrete series, support for continuous series will come in the future.
 
 # Installation
 [Click here](https://github.com/nk-world/StatisticsCalc/releases/) to go to releases and download it.
@@ -23,7 +23,10 @@ Currently, this application only supports individual series, support for discret
 # Using
   1. Open the application
   2. Choose the type of data
-  3. Enter the data separated by commas, invalid datas will be blocked automatically.
-  4. The result will be displayed on the screen. The result can be clicked on to copy it.
- 
+  3. For individual series: 
+Input the data separated by commas, the result will be displayed as the data is typed. Each data separated by comma must be a positive or negative number with or without decimal parts. Any invalid input including the numbers attached with invalid characters will be ignored.
+  4. For discrete series:
+There is a separate column for entering data and frequency. The data can be a positive or negative number with or without decimal parts whereas the frequency must be a positive integer. Any invalid input will show an error message. For discrete series, the data is not calculated automatically and the `Calculate` button must be pressed.
+
+ ---
 Thanks a lot for using my `Statistics Calculator`!
