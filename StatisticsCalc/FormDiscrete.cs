@@ -140,21 +140,24 @@ namespace StatisticsCalc
                 ? string.Join(", ", modeList)
                 : "-";
 
-            UpdateResultLabel(mean, median, mode, q1, q3, max, min, md1, md2, mdc1, mdc2, sd, sdc, variance, varc);
+            int dataCount = data.Count;
+
+            UpdateResultLabel(mean, median, mode, q1, q3, max, min, md1, md2, mdc1, mdc2, sd, sdc, variance, varc, dataCount);
         }
 
         private void ResetResults()
         {
             ResultMean.Text = ResultMedian.Text = ResultMode.Text = ResultMax.Text = ResultMin.Text = ResultQ1.Text = ResultQ3.Text = "-";
             ResultMD1.Text = ResultMD2.Text = ResultMDC1.Text = ResultMDC2.Text = ResultSD.Text = ResultSDC.Text = ResultVar.Text =
-                ResultVarC.Text = "-";
+                ResultVarC.Text = ResultN.Text = "-";
         }
 
         private void UpdateResultLabel(
             double mean, double median, string mode,
             double q1, double q3, double max, double min,
             double md1, double md2, double mdc1, double mdc2,
-            double sd, double sdc, double variance, double varc)
+            double sd, double sdc, double variance, double varc,
+            int dataCount)
         {
             ResultMean.Text = double.IsNaN(mean) ? "-" : mean.ToString();
             ResultMedian.Text = double.IsNaN(median) ? "-" : median.ToString();
@@ -171,6 +174,7 @@ namespace StatisticsCalc
             ResultSDC.Text = double.IsNaN(sdc) ? "-" : sdc.ToString();
             ResultVar.Text = double.IsNaN(variance) ? "-" : variance.ToString();
             ResultVarC.Text = double.IsNaN(varc) ? "-" : (varc.ToString() + "%");
+            ResultN.Text = dataCount.ToString();
         }
 
         private void ResultMean_Click(object sender, EventArgs e)

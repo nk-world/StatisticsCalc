@@ -63,8 +63,10 @@
             this.LabelMode = new System.Windows.Forms.Label();
             this.LabelMedian = new System.Windows.Forms.Label();
             this.LabelMean = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.CalcButton = new System.Windows.Forms.Button();
+            this.labelTotalNum = new System.Windows.Forms.Label();
+            this.ResultN = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -387,15 +389,15 @@
             this.LabelMean.TabIndex = 7;
             this.LabelMean.Text = "Mean:";
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(318, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 42);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Discrete Series Result";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(318, 9);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(387, 42);
+            this.labelTitle.TabIndex = 38;
+            this.labelTitle.Text = "Discrete Series Result";
             // 
             // CalcButton
             // 
@@ -407,13 +409,33 @@
             this.CalcButton.UseVisualStyleBackColor = true;
             this.CalcButton.Click += new System.EventHandler(this.CalcButton_Click);
             // 
+            // labelTotalNum
+            // 
+            this.labelTotalNum.AutoSize = true;
+            this.labelTotalNum.Location = new System.Drawing.Point(385, 339);
+            this.labelTotalNum.Name = "labelTotalNum";
+            this.labelTotalNum.Size = new System.Drawing.Size(112, 13);
+            this.labelTotalNum.TabIndex = 40;
+            this.labelTotalNum.Text = "Total Number of Data:";
+            // 
+            // ResultN
+            // 
+            this.ResultN.AutoSize = true;
+            this.ResultN.Location = new System.Drawing.Point(503, 339);
+            this.ResultN.Name = "ResultN";
+            this.ResultN.Size = new System.Drawing.Size(10, 13);
+            this.ResultN.TabIndex = 41;
+            this.ResultN.Text = "-";
+            // 
             // FormDiscrete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultN);
+            this.Controls.Add(this.labelTotalNum);
             this.Controls.Add(this.CalcButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.ResultMD2);
             this.Controls.Add(this.ResultMDC2);
             this.Controls.Add(this.ResultSD);
@@ -494,7 +516,9 @@
         private System.Windows.Forms.Label LabelMode;
         private System.Windows.Forms.Label LabelMedian;
         private System.Windows.Forms.Label LabelMean;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button CalcButton;
+        private System.Windows.Forms.Label labelTotalNum;
+        private System.Windows.Forms.Label ResultN;
     }
 }
