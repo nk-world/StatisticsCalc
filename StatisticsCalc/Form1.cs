@@ -25,7 +25,10 @@ namespace StatisticsCalc
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Work in progress");
+            FormDiscrete formDiscrete = new FormDiscrete();
+            formDiscrete.Show();
+            formDiscrete.Owner = this;
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
