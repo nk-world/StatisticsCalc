@@ -33,7 +33,10 @@ namespace StatisticsCalc
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Work in progress");
+            FormContinuous formContinuous = new FormContinuous();
+            formContinuous.Show();
+            formContinuous.Owner = this;
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
