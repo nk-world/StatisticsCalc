@@ -86,6 +86,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(244, 426);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValidated);
             this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
@@ -108,6 +109,7 @@
             this.ResultDataCount.Size = new System.Drawing.Size(10, 13);
             this.ResultDataCount.TabIndex = 73;
             this.ResultDataCount.Text = "-";
+            this.ResultDataCount.Click += new System.EventHandler(this.ResultDataCount_Click);
             // 
             // labelTotalNum
             // 
@@ -126,6 +128,7 @@
             this.ResultMeanDeviationFromMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultMeanDeviationFromMedian.TabIndex = 70;
             this.ResultMeanDeviationFromMedian.Text = "-";
+            this.ResultMeanDeviationFromMedian.Click += new System.EventHandler(this.ResultMeanDeviationFromMedian_Click);
             // 
             // ResultCoefficientOfMeanDeviationFromMedian
             // 
@@ -135,6 +138,7 @@
             this.ResultCoefficientOfMeanDeviationFromMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfMeanDeviationFromMedian.TabIndex = 69;
             this.ResultCoefficientOfMeanDeviationFromMedian.Text = "-";
+            this.ResultCoefficientOfMeanDeviationFromMedian.Click += new System.EventHandler(this.ResultCoefficientOfMeanDeviationFromMedian_Click);
             // 
             // ResultStandardDeviation
             // 
@@ -144,6 +148,7 @@
             this.ResultStandardDeviation.Size = new System.Drawing.Size(10, 13);
             this.ResultStandardDeviation.TabIndex = 68;
             this.ResultStandardDeviation.Text = "-";
+            this.ResultStandardDeviation.Click += new System.EventHandler(this.ResultStandardDeviation_Click);
             // 
             // ResultCoefficientOfStandardDeviation
             // 
@@ -153,6 +158,7 @@
             this.ResultCoefficientOfStandardDeviation.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfStandardDeviation.TabIndex = 67;
             this.ResultCoefficientOfStandardDeviation.Text = "-";
+            this.ResultCoefficientOfStandardDeviation.Click += new System.EventHandler(this.ResultCoefficientOfStandardDeviation_Click);
             // 
             // ResultVariance
             // 
@@ -162,6 +168,7 @@
             this.ResultVariance.Size = new System.Drawing.Size(10, 13);
             this.ResultVariance.TabIndex = 66;
             this.ResultVariance.Text = "-";
+            this.ResultVariance.Click += new System.EventHandler(this.ResultVariance_Click);
             // 
             // ResultCoefficientOfVariance
             // 
@@ -171,6 +178,7 @@
             this.ResultCoefficientOfVariance.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfVariance.TabIndex = 65;
             this.ResultCoefficientOfVariance.Text = "-";
+            this.ResultCoefficientOfVariance.Click += new System.EventHandler(this.ResultCoefficientOfVariance_Click);
             // 
             // ResultCoefficientOfMeanDeviationFromMean
             // 
@@ -180,6 +188,7 @@
             this.ResultCoefficientOfMeanDeviationFromMean.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfMeanDeviationFromMean.TabIndex = 64;
             this.ResultCoefficientOfMeanDeviationFromMean.Text = "-";
+            this.ResultCoefficientOfMeanDeviationFromMean.Click += new System.EventHandler(this.ResultCoefficientOfMeanDeviationFromMean_Click);
             // 
             // ResultMeanDeviationFromMean
             // 
@@ -189,6 +198,7 @@
             this.ResultMeanDeviationFromMean.Size = new System.Drawing.Size(10, 13);
             this.ResultMeanDeviationFromMean.TabIndex = 63;
             this.ResultMeanDeviationFromMean.Text = "-";
+            this.ResultMeanDeviationFromMean.Click += new System.EventHandler(this.ResultMeanDeviationFromMean_Click);
             // 
             // ResultUpperQuartile
             // 
@@ -198,6 +208,7 @@
             this.ResultUpperQuartile.Size = new System.Drawing.Size(10, 13);
             this.ResultUpperQuartile.TabIndex = 60;
             this.ResultUpperQuartile.Text = "-";
+            this.ResultUpperQuartile.Click += new System.EventHandler(this.ResultUpperQuartile_Click);
             // 
             // ResultLowerQuartile
             // 
@@ -207,6 +218,7 @@
             this.ResultLowerQuartile.Size = new System.Drawing.Size(10, 13);
             this.ResultLowerQuartile.TabIndex = 59;
             this.ResultLowerQuartile.Text = "-";
+            this.ResultLowerQuartile.Click += new System.EventHandler(this.ResultLowerQuartile_Click);
             // 
             // ResultMode
             // 
@@ -216,6 +228,7 @@
             this.ResultMode.Size = new System.Drawing.Size(10, 13);
             this.ResultMode.TabIndex = 71;
             this.ResultMode.Text = "-";
+            this.ResultMode.Click += new System.EventHandler(this.ResultMode_Click);
             // 
             // ResultMedian
             // 
@@ -225,6 +238,7 @@
             this.ResultMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultMedian.TabIndex = 58;
             this.ResultMedian.Text = "-";
+            this.ResultMedian.Click += new System.EventHandler(this.ResultMedian_Click);
             // 
             // ResultMean
             // 
@@ -234,6 +248,7 @@
             this.ResultMean.Size = new System.Drawing.Size(10, 13);
             this.ResultMean.TabIndex = 57;
             this.ResultMean.Text = "-";
+            this.ResultMean.Click += new System.EventHandler(this.ResultMean_Click);
             // 
             // LabelVarianceCoefficient
             // 
@@ -368,7 +383,7 @@
             this.CalcButton.Name = "CalcButton";
             this.CalcButton.Size = new System.Drawing.Size(75, 22);
             this.CalcButton.TabIndex = 75;
-            this.CalcButton.Text = "Calculate";
+            this.CalcButton.Text = "Refresh";
             this.CalcButton.UseVisualStyleBackColor = true;
             this.CalcButton.Click += new System.EventHandler(this.CalcButton_Click);
             // 

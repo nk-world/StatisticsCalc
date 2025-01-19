@@ -89,6 +89,11 @@ namespace StatisticsCalc
             ShowResults();
         }
 
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowResults();
+        }
+
         private void ShowResults()
         {
             bool isDataPresent = false;

@@ -90,6 +90,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(243, 428);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValidated);
             this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
@@ -405,7 +406,7 @@
             this.CalcButton.Name = "CalcButton";
             this.CalcButton.Size = new System.Drawing.Size(75, 23);
             this.CalcButton.TabIndex = 39;
-            this.CalcButton.Text = "Calculate";
+            this.CalcButton.Text = "Refresh";
             this.CalcButton.UseVisualStyleBackColor = true;
             this.CalcButton.Click += new System.EventHandler(this.CalcButton_Click);
             // 
