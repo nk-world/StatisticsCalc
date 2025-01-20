@@ -21,13 +21,12 @@ namespace StatisticsCalc
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Owner?.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FormContinuous_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner?.Show();
-            this.Close();
+            Application.Exit();
         }
 
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)

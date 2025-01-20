@@ -19,8 +19,7 @@ namespace StatisticsCalc
 
         private void FormDiscrete_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner?.Show();
-            this.Close();
+            Application.Exit();
         }
 
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)

@@ -19,8 +19,7 @@ namespace StatisticsCalc
 
         private void FormIndividual_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner?.Show();
-            this.Close();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
