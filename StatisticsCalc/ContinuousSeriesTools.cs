@@ -196,7 +196,7 @@ namespace StatisticsCalc
             int n = statisticsData.Sum(data => data.frequency);
             double variance = sumOfSquares / n;
             double standardDeviation = Math.Sqrt(variance);
-            double coefficientOfStandardDeviation = (standardDeviation / mean) * 100;
+            double coefficientOfStandardDeviation = standardDeviation / mean;
             return (standardDeviation, coefficientOfStandardDeviation);
         }
 

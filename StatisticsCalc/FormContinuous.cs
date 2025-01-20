@@ -184,12 +184,12 @@ namespace StatisticsCalc
             ResultLowerQuartile.Text = statisticsResult.lowerQuartile.ToString();
             ResultMeanDeviationFromMean.Text = statisticsResult.meanDeviationFromMean.ToString();
             ResultMeanDeviationFromMedian.Text = statisticsResult.meanDeviationFromMedian.ToString();
-            ResultCoefficientOfMeanDeviationFromMean.Text = statisticsResult.coefficientOfMeanDeviationFromMean.ToString();
-            ResultCoefficientOfMeanDeviationFromMedian.Text = statisticsResult.coefficientOfMeanDeviationFromMedian.ToString();
+            ResultCoefficientOfMeanDeviationFromMean.Text = statisticsResult.coefficientOfMeanDeviationFromMean.ToString() + "%";
+            ResultCoefficientOfMeanDeviationFromMedian.Text = statisticsResult.coefficientOfMeanDeviationFromMedian.ToString() + "%";
             ResultStandardDeviation.Text = statisticsResult.standardDeviation.ToString();
             ResultCoefficientOfStandardDeviation.Text = statisticsResult.coefficientOfStandardDeviation.ToString();
             ResultVariance.Text = statisticsResult.variance.ToString();
-            ResultCoefficientOfVariance.Text = statisticsResult.coefficientOfVariance.ToString();
+            ResultCoefficientOfVariance.Text = statisticsResult.coefficientOfVariance.ToString() + "%";
             ResultDataCount.Text = statisticsResult.totalNumberOfData.ToString();
         }
 
