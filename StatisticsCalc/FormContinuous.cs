@@ -182,6 +182,9 @@ namespace StatisticsCalc
             ResultMode.Text = statisticsResult.mode.ToString();
             ResultUpperQuartile.Text = statisticsResult.upperQuartile.ToString();
             ResultLowerQuartile.Text = statisticsResult.lowerQuartile.ToString();
+            ResultInterQuartileRange.Text = statisticsResult.interQuartileRange.ToString();
+            ResultQuartileDeviation.Text = statisticsResult.quartileDeviation.ToString();
+            ResultCoefficientQD.Text = statisticsResult.coefficientOfQuartileDeviation.ToString() + "%";
             ResultMeanDeviationFromMean.Text = statisticsResult.meanDeviationFromMean.ToString();
             ResultMeanDeviationFromMedian.Text = statisticsResult.meanDeviationFromMedian.ToString();
             ResultCoefficientOfMeanDeviationFromMean.Text = statisticsResult.coefficientOfMeanDeviationFromMean.ToString() + "%";
@@ -266,6 +269,31 @@ namespace StatisticsCalc
         }
 
         private void ResultDataCount_Click(object sender, EventArgs e)
+        {
+            CopyResult(sender);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QDlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResultInterQuartileRange_Click(object sender, EventArgs e)
+        {
+            CopyResult(sender);
+        }
+
+        private void ResultQuartileDeviation_Click(object sender, EventArgs e)
+        {
+            CopyResult(sender);
+        }
+
+        private void ResultCoefficientQD_Click(object sender, EventArgs e)
         {
             CopyResult(sender);
         }

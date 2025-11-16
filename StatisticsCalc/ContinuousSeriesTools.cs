@@ -34,6 +34,9 @@ namespace StatisticsCalc
         public double mode;
         public double upperQuartile;
         public double lowerQuartile;
+        public double interQuartileRange => upperQuartile - lowerQuartile;
+        public double quartileDeviation => interQuartileRange / 2;
+        public double coefficientOfQuartileDeviation => (quartileDeviation / ((upperQuartile + lowerQuartile) / 2)) * 100;
         public double meanDeviationFromMean;
         public double coefficientOfMeanDeviationFromMean;
         public double meanDeviationFromMedian;
@@ -81,9 +84,9 @@ namespace StatisticsCalc
             foreach (string ci in classIntervals)
             {
                 (double l, double u) = GetClassInterval(ci);
-                if (lowerLimit >= l && lowerLimit < u)
+                if (lowerLimit > l && lowerLimit < u)
                     return false;
-                if (upperLimit >= l && upperLimit <= u)
+                if (upperLimit > l && upperLimit < u)
                     return false;
             }
 

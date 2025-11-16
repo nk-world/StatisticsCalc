@@ -63,6 +63,12 @@
             this.LabelMean = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.CalcButton = new System.Windows.Forms.Button();
+            this.IQRlabel = new System.Windows.Forms.Label();
+            this.QDlabel = new System.Windows.Forms.Label();
+            this.qdclabel = new System.Windows.Forms.Label();
+            this.ResultInterQuartileRange = new System.Windows.Forms.Label();
+            this.ResultQuartileDeviation = new System.Windows.Forms.Label();
+            this.ResultCoefficientQD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +110,7 @@
             // ResultDataCount
             // 
             this.ResultDataCount.AutoSize = true;
-            this.ResultDataCount.Location = new System.Drawing.Point(471, 325);
+            this.ResultDataCount.Location = new System.Drawing.Point(471, 372);
             this.ResultDataCount.Name = "ResultDataCount";
             this.ResultDataCount.Size = new System.Drawing.Size(10, 13);
             this.ResultDataCount.TabIndex = 73;
@@ -114,7 +120,7 @@
             // labelTotalNum
             // 
             this.labelTotalNum.AutoSize = true;
-            this.labelTotalNum.Location = new System.Drawing.Point(353, 325);
+            this.labelTotalNum.Location = new System.Drawing.Point(353, 372);
             this.labelTotalNum.Name = "labelTotalNum";
             this.labelTotalNum.Size = new System.Drawing.Size(112, 13);
             this.labelTotalNum.TabIndex = 72;
@@ -123,7 +129,7 @@
             // ResultMeanDeviationFromMedian
             // 
             this.ResultMeanDeviationFromMedian.AutoSize = true;
-            this.ResultMeanDeviationFromMedian.Location = new System.Drawing.Point(471, 219);
+            this.ResultMeanDeviationFromMedian.Location = new System.Drawing.Point(471, 266);
             this.ResultMeanDeviationFromMedian.Name = "ResultMeanDeviationFromMedian";
             this.ResultMeanDeviationFromMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultMeanDeviationFromMedian.TabIndex = 70;
@@ -133,7 +139,7 @@
             // ResultCoefficientOfMeanDeviationFromMedian
             // 
             this.ResultCoefficientOfMeanDeviationFromMedian.AutoSize = true;
-            this.ResultCoefficientOfMeanDeviationFromMedian.Location = new System.Drawing.Point(471, 232);
+            this.ResultCoefficientOfMeanDeviationFromMedian.Location = new System.Drawing.Point(471, 279);
             this.ResultCoefficientOfMeanDeviationFromMedian.Name = "ResultCoefficientOfMeanDeviationFromMedian";
             this.ResultCoefficientOfMeanDeviationFromMedian.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfMeanDeviationFromMedian.TabIndex = 69;
@@ -143,7 +149,7 @@
             // ResultStandardDeviation
             // 
             this.ResultStandardDeviation.AutoSize = true;
-            this.ResultStandardDeviation.Location = new System.Drawing.Point(471, 259);
+            this.ResultStandardDeviation.Location = new System.Drawing.Point(471, 306);
             this.ResultStandardDeviation.Name = "ResultStandardDeviation";
             this.ResultStandardDeviation.Size = new System.Drawing.Size(10, 13);
             this.ResultStandardDeviation.TabIndex = 68;
@@ -153,7 +159,7 @@
             // ResultCoefficientOfStandardDeviation
             // 
             this.ResultCoefficientOfStandardDeviation.AutoSize = true;
-            this.ResultCoefficientOfStandardDeviation.Location = new System.Drawing.Point(471, 272);
+            this.ResultCoefficientOfStandardDeviation.Location = new System.Drawing.Point(471, 319);
             this.ResultCoefficientOfStandardDeviation.Name = "ResultCoefficientOfStandardDeviation";
             this.ResultCoefficientOfStandardDeviation.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfStandardDeviation.TabIndex = 67;
@@ -163,7 +169,7 @@
             // ResultVariance
             // 
             this.ResultVariance.AutoSize = true;
-            this.ResultVariance.Location = new System.Drawing.Point(471, 285);
+            this.ResultVariance.Location = new System.Drawing.Point(471, 332);
             this.ResultVariance.Name = "ResultVariance";
             this.ResultVariance.Size = new System.Drawing.Size(10, 13);
             this.ResultVariance.TabIndex = 66;
@@ -173,7 +179,7 @@
             // ResultCoefficientOfVariance
             // 
             this.ResultCoefficientOfVariance.AutoSize = true;
-            this.ResultCoefficientOfVariance.Location = new System.Drawing.Point(471, 298);
+            this.ResultCoefficientOfVariance.Location = new System.Drawing.Point(471, 345);
             this.ResultCoefficientOfVariance.Name = "ResultCoefficientOfVariance";
             this.ResultCoefficientOfVariance.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfVariance.TabIndex = 65;
@@ -183,7 +189,7 @@
             // ResultCoefficientOfMeanDeviationFromMean
             // 
             this.ResultCoefficientOfMeanDeviationFromMean.AutoSize = true;
-            this.ResultCoefficientOfMeanDeviationFromMean.Location = new System.Drawing.Point(471, 195);
+            this.ResultCoefficientOfMeanDeviationFromMean.Location = new System.Drawing.Point(471, 242);
             this.ResultCoefficientOfMeanDeviationFromMean.Name = "ResultCoefficientOfMeanDeviationFromMean";
             this.ResultCoefficientOfMeanDeviationFromMean.Size = new System.Drawing.Size(10, 13);
             this.ResultCoefficientOfMeanDeviationFromMean.TabIndex = 64;
@@ -193,7 +199,7 @@
             // ResultMeanDeviationFromMean
             // 
             this.ResultMeanDeviationFromMean.AutoSize = true;
-            this.ResultMeanDeviationFromMean.Location = new System.Drawing.Point(471, 182);
+            this.ResultMeanDeviationFromMean.Location = new System.Drawing.Point(471, 229);
             this.ResultMeanDeviationFromMean.Name = "ResultMeanDeviationFromMean";
             this.ResultMeanDeviationFromMean.Size = new System.Drawing.Size(10, 13);
             this.ResultMeanDeviationFromMean.TabIndex = 63;
@@ -253,7 +259,7 @@
             // LabelVarianceCoefficient
             // 
             this.LabelVarianceCoefficient.AutoSize = true;
-            this.LabelVarianceCoefficient.Location = new System.Drawing.Point(348, 298);
+            this.LabelVarianceCoefficient.Location = new System.Drawing.Point(348, 345);
             this.LabelVarianceCoefficient.Name = "LabelVarianceCoefficient";
             this.LabelVarianceCoefficient.Size = new System.Drawing.Size(117, 13);
             this.LabelVarianceCoefficient.TabIndex = 55;
@@ -262,7 +268,7 @@
             // LabelVariance
             // 
             this.LabelVariance.AutoSize = true;
-            this.LabelVariance.Location = new System.Drawing.Point(413, 285);
+            this.LabelVariance.Location = new System.Drawing.Point(413, 332);
             this.LabelVariance.Name = "LabelVariance";
             this.LabelVariance.Size = new System.Drawing.Size(52, 13);
             this.LabelVariance.TabIndex = 54;
@@ -271,7 +277,7 @@
             // LabelStandardDeviationCoefficient
             // 
             this.LabelStandardDeviationCoefficient.AutoSize = true;
-            this.LabelStandardDeviationCoefficient.Location = new System.Drawing.Point(369, 272);
+            this.LabelStandardDeviationCoefficient.Location = new System.Drawing.Point(369, 319);
             this.LabelStandardDeviationCoefficient.Name = "LabelStandardDeviationCoefficient";
             this.LabelStandardDeviationCoefficient.Size = new System.Drawing.Size(96, 13);
             this.LabelStandardDeviationCoefficient.TabIndex = 53;
@@ -280,7 +286,7 @@
             // LabelStandardDeviation
             // 
             this.LabelStandardDeviation.AutoSize = true;
-            this.LabelStandardDeviation.Location = new System.Drawing.Point(364, 259);
+            this.LabelStandardDeviation.Location = new System.Drawing.Point(364, 306);
             this.LabelStandardDeviation.Name = "LabelStandardDeviation";
             this.LabelStandardDeviation.Size = new System.Drawing.Size(101, 13);
             this.LabelStandardDeviation.TabIndex = 52;
@@ -289,7 +295,7 @@
             // LabelMDMedianCoefficient
             // 
             this.LabelMDMedianCoefficient.AutoSize = true;
-            this.LabelMDMedianCoefficient.Location = new System.Drawing.Point(306, 232);
+            this.LabelMDMedianCoefficient.Location = new System.Drawing.Point(306, 279);
             this.LabelMDMedianCoefficient.Name = "LabelMDMedianCoefficient";
             this.LabelMDMedianCoefficient.Size = new System.Drawing.Size(159, 13);
             this.LabelMDMedianCoefficient.TabIndex = 51;
@@ -298,7 +304,7 @@
             // LabelMDMedian
             // 
             this.LabelMDMedian.AutoSize = true;
-            this.LabelMDMedian.Location = new System.Drawing.Point(319, 219);
+            this.LabelMDMedian.Location = new System.Drawing.Point(319, 266);
             this.LabelMDMedian.Name = "LabelMDMedian";
             this.LabelMDMedian.Size = new System.Drawing.Size(146, 13);
             this.LabelMDMedian.TabIndex = 50;
@@ -307,7 +313,7 @@
             // LabelMDMeanCoefficient
             // 
             this.LabelMDMeanCoefficient.AutoSize = true;
-            this.LabelMDMeanCoefficient.Location = new System.Drawing.Point(314, 195);
+            this.LabelMDMeanCoefficient.Location = new System.Drawing.Point(314, 242);
             this.LabelMDMeanCoefficient.Name = "LabelMDMeanCoefficient";
             this.LabelMDMeanCoefficient.Size = new System.Drawing.Size(151, 13);
             this.LabelMDMeanCoefficient.TabIndex = 49;
@@ -316,7 +322,7 @@
             // LabelMDMean
             // 
             this.LabelMDMean.AutoSize = true;
-            this.LabelMDMean.Location = new System.Drawing.Point(327, 182);
+            this.LabelMDMean.Location = new System.Drawing.Point(327, 229);
             this.LabelMDMean.Name = "LabelMDMean";
             this.LabelMDMean.Size = new System.Drawing.Size(138, 13);
             this.LabelMDMean.TabIndex = 48;
@@ -387,11 +393,76 @@
             this.CalcButton.UseVisualStyleBackColor = true;
             this.CalcButton.Click += new System.EventHandler(this.CalcButton_Click);
             // 
+            // IQRlabel
+            // 
+            this.IQRlabel.AutoSize = true;
+            this.IQRlabel.Location = new System.Drawing.Point(360, 173);
+            this.IQRlabel.Name = "IQRlabel";
+            this.IQRlabel.Size = new System.Drawing.Size(105, 13);
+            this.IQRlabel.TabIndex = 76;
+            this.IQRlabel.Text = "Inter Quartile Range:";
+            this.IQRlabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // QDlabel
+            // 
+            this.QDlabel.AutoSize = true;
+            this.QDlabel.Location = new System.Drawing.Point(371, 186);
+            this.QDlabel.Name = "QDlabel";
+            this.QDlabel.Size = new System.Drawing.Size(94, 13);
+            this.QDlabel.TabIndex = 77;
+            this.QDlabel.Text = "Quartile Deviation:";
+            this.QDlabel.Click += new System.EventHandler(this.QDlabel_Click);
+            // 
+            // qdclabel
+            // 
+            this.qdclabel.AutoSize = true;
+            this.qdclabel.Location = new System.Drawing.Point(306, 199);
+            this.qdclabel.Name = "qdclabel";
+            this.qdclabel.Size = new System.Drawing.Size(159, 13);
+            this.qdclabel.TabIndex = 78;
+            this.qdclabel.Text = "Coefficient of Quartile Deviation:";
+            // 
+            // ResultInterQuartileRange
+            // 
+            this.ResultInterQuartileRange.AutoSize = true;
+            this.ResultInterQuartileRange.Location = new System.Drawing.Point(471, 173);
+            this.ResultInterQuartileRange.Name = "ResultInterQuartileRange";
+            this.ResultInterQuartileRange.Size = new System.Drawing.Size(10, 13);
+            this.ResultInterQuartileRange.TabIndex = 79;
+            this.ResultInterQuartileRange.Text = "-";
+            this.ResultInterQuartileRange.Click += new System.EventHandler(this.ResultInterQuartileRange_Click);
+            // 
+            // ResultQuartileDeviation
+            // 
+            this.ResultQuartileDeviation.AutoSize = true;
+            this.ResultQuartileDeviation.Location = new System.Drawing.Point(471, 186);
+            this.ResultQuartileDeviation.Name = "ResultQuartileDeviation";
+            this.ResultQuartileDeviation.Size = new System.Drawing.Size(10, 13);
+            this.ResultQuartileDeviation.TabIndex = 80;
+            this.ResultQuartileDeviation.Text = "-";
+            this.ResultQuartileDeviation.Click += new System.EventHandler(this.ResultQuartileDeviation_Click);
+            // 
+            // ResultCoefficientQD
+            // 
+            this.ResultCoefficientQD.AutoSize = true;
+            this.ResultCoefficientQD.Location = new System.Drawing.Point(471, 199);
+            this.ResultCoefficientQD.Name = "ResultCoefficientQD";
+            this.ResultCoefficientQD.Size = new System.Drawing.Size(10, 13);
+            this.ResultCoefficientQD.TabIndex = 81;
+            this.ResultCoefficientQD.Text = "-";
+            this.ResultCoefficientQD.Click += new System.EventHandler(this.ResultCoefficientQD_Click);
+            // 
             // FormContinuous
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultCoefficientQD);
+            this.Controls.Add(this.ResultQuartileDeviation);
+            this.Controls.Add(this.ResultInterQuartileRange);
+            this.Controls.Add(this.qdclabel);
+            this.Controls.Add(this.QDlabel);
+            this.Controls.Add(this.IQRlabel);
             this.Controls.Add(this.CalcButton);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.ResultDataCount);
@@ -472,5 +543,11 @@
         private System.Windows.Forms.Label LabelMean;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button CalcButton;
+        private System.Windows.Forms.Label IQRlabel;
+        private System.Windows.Forms.Label QDlabel;
+        private System.Windows.Forms.Label qdclabel;
+        private System.Windows.Forms.Label ResultInterQuartileRange;
+        private System.Windows.Forms.Label ResultQuartileDeviation;
+        private System.Windows.Forms.Label ResultCoefficientQD;
     }
 }
